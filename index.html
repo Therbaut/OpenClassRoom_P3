@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link type="text/css" rel="stylessheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ffc372b972.js" crossorigin="anonymous"></script>
+    <title>ohmyfood</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">ohmyfood</div>
+    </header>
+    <main>
+        <div class="localisation">
+            <i class="fa-solid fa-location-dot fa-1.5x" id="localisation"></i>
+            <form method="post" action="#">
+                <div class="search">
+                    <input type="text" placeholder="Paris, Belleville" id="recherche" />
+                </div>
+            </form>
+        </div>
+        <div class="information">
+            <div class="info-fonction">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <div class="btn_explore">
+                    <button type="submit" id="explore">
+                        <p>Explorer nos restaurants</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="fonctionnement">
+            <h1>Fonctionnement</h1>
+            <div class="etape">
+                <div class="etape-number">
+                    <p>1</p>
+                </div>
+                <div class="etape-text">
+                    <a href="#">
+                        <i class="fa-solid fa-mobile-screen-button" id="etape-icone"></i>
+                        <div class="fonctionnement-text">
+                            <p>Choisissez un restaurant</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="etape">
+                <div class="etape-number">
+                    <p>2</p>
+                </div>
+                <div class="etape-text">
+                    <a href="#">
+                        <i class="fa-solid fa-list" id="etape-icone"></i>
+                        <div class="fonctionnement-text">
+                            <p>Composez votre menu</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="etape">
+                <div class="etape-number">
+                    <p>3</p>
+                </div>
+                <div class="etape-text">
+                    <a href="#">
+                        <i class="fa-solid fa-store" id="etape-icone"></i>
+                        <div class="fonctionnement-text">
+                            <p>Dégustez au restaurant</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="restaurants">
+            <div class="titre">
+                <h1>Restaurants</h1>
+            </div>
+            <div class="card-container">
+                <div class="container">
+                    <div class="container_img">
+                        <div class="new">Nouveau</div>
+                        <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="La palette du goût">
+                    </div>
+                    <div class="container_info">
+                        <div class="Nom_restaurant">
+                            <p><strong>La palette du goût</strong></p>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="favoris">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
