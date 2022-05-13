@@ -1,246 +1,314 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
 
-$font-titre-logo:shrikhand;
-$font-text:roboto;
-$color-primary:#9356DC;
-$color-secondary:#FF79DA;
-$color-tertiary:#99E2D0;
-$color-search:#eaeaea;
+$font-titre-logo: shrikhand;
+$font-text: roboto;
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-search: #eaeaea;
 
 
 
 
-    body {
+body {
+    margin: 0;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    font-family: $font-titre-logo;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+/*---------------------------------Localisation---------------------------------*/
+.localisation {
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-search;
+    font-weight: 600;
+
+    #localisation {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+    }
+
+    #recherche {
+        width: auto;
+        align-items: center;
         margin: 0%;
-    }
-
-    header {
-        font-family: $font-titre-logo;
-        font-size: 35px;
-        display: flex;
-        justify-content: center;
-        margin: 10px;
-    }
-
-    /*---------------------------------Localisation---------------------------------*/
-    .localisation {
-        display: flex;
-        box-sizing: border-box;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        background-color: $color-search;
-        font-weight: 600;
-
-        #localisation {
-            display: flex;
-            width: 50px;
-            height: 50px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #recherche {
-            display: flex;
-            width: auto;
-            align-items: center;
-            margin: 0%;
-            padding: 0%;
-            border: none;
-            background-color: $color-search;
-        }
-    }
-
-    /*---------------------------------information---------------------------------*/
-
-    .information {
-        display: flex;
-        background-color: #f6f6f6;
-    }
-
-    .info-fonction {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 30px;
-
-        h1 {
-            display: flex;
-            font-size: 25px;
-            font-family: $font-text;
-
-        }
-
-        p {
-            display: flex;
-            font-size: 15px;
-            font-family: $font-text;
-        }
-
-        .btn-explore {
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-    #explore {
-        border-radius: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
-        color: white;
-        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        padding: 0%;
         border: none;
+        background-color: $color-search;
+    }
+}
+
+/*---------------------------------information---------------------------------*/
+
+.information {
+    display: flex;
+    background-color: #f6f6f6;
+    justify-content: center;
+}
+
+.info-fonction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+
+    h1 {
+        font-size: 25px;
+        font-family: $font-text;
+
     }
 
-    /*---------------------------------fonctionnement---------------------------------*/
-    .etape {
+    p {
+        font-size: 15px;
+        font-family: $font-text;
+    }
+
+    .btn-explore {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+#explore {
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    border: none;
+    height: 50px;
+    font-size: 15px;
+    &:hover {
+        color: #353535;
+        background: linear-gradient(to bottom right, #ff79d973, #9256dc94);
+    }
+}
+
+
+/*---------------------------------fonctionnement---------------------------------*/
+.fonctionnement {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.etape {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 15px;
+
+
+    a {
+        display: flex;
+        width: 98%;
+    }
+}
+
+a:hover {
+    .etape-text{
+        background-color: #f5edff;
+    }
+    
+    #etape-icone{
+        color: $color-primary;
+    }
+}
+
+
+
+.etape-text {
+    display: flex;
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 75px;
+    align-items: center;
+    padding-left: 25px;
+
+
+    #etape-icone {
+        display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        width: 25px;
+        padding-right: 15px;
+        color: #7e7e7e;
     }
 
-    .etape-text {
-        display: flex;
-        box-sizing: border-box;
-        align-items: center;
-        background-color: #f6f6f6;
-        border-radius: 15px;
-        width: 80%;
-        height: 80px;
-        box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.1);
-
-        #etape-icone {
-            display: flex;
-            width: 50px;
-            height: 50px;
-            align-items: center;
-            justify-content: center;
-            color: #7e7e7e;
-            margin-left: 20px;
-        }
-
-        p {
-            font-size: 15px;
-            font-weight: 500;
-            font-family: $font-text;
-        }
-
-        a {
-            display: flex;
-            text-decoration: none;
-        }
-
-    }
-
-    .etape-text a:hover {
-
-        background-color: #f5edff;
-        display: flex;
-        box-sizing: border-box;
-        align-items: center;
-        border-radius: 15px;
-        width: 100%;
-        height: 80px;
+}
 
 
-        #etape-icone {
-            color: $color-primary;
-        }
-    }
 
-    .etape-text a:visited {
-        text-decoration: none;
-        color: black;
-    }
-
-    .fonctionnement h1 {
-        font-family: $font-text;
-        font-size: 25px;
-        padding: 20px;
-    }
-
-    .etape-number {
-        display: flex;
+.etape-number {
+    p {
         position: absolute;
-        left: 25px;
-
-        p {
-            display: flex;
-            background-color: $color-primary;
-            border-radius: 15px;
-            width: 30px;
-            height: 30px;
-            color: white;
-            align-items: center;
-            justify-content: center;
-
-        }
+        display: flex;
+        background-color: $color-primary;
+        border-radius: 15px;
+        width: 30px;
+        height: 30px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        top: 7.5px;
+        left: -15px;
     }
+}
 
-    /*---------------------------------Restaurant---------------------------------*/
 
-    .titre h1 {
-        font-family: $font-text;
-        font-size: 25px;
-        padding: 20px;
-    }
+
+
+
+/*---------------------------------Restaurant---------------------------------*/
+
+.titre h1 {
+    font-family: $font-text;
+    font-size: 25px;
+    padding: 20px;
+}
 
 .restaurants {
     background-color: #f6f6f6;
 }
 
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
 
-    .container {
-        width: 350px;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 15px;
-        background-color: white;
+.container {
+    width: 95%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    justify-content: space-between;
+    margin: 15px;
 
-        .container_img img{
+    .container_img img {
         width: 100%;
         height: 225px;
         display: flex;
         object-fit: cover;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        position: relative;
         z-index: 1;
-        }
+    }
 
-        .container_img .new {
-            position: absolute;
-            font-family: $font-text;
-            font-weight: 500;
-            font-size: 15px;
-            color: #008766;
-            text-align: center;
-            margin-top: 25px;
-            padding-top: 5px;
-            background-color: $color-tertiary;
-            z-index: 2;
-            width: 100px;
-            height: 25px;
-            left: 250px;
-            border-radius: 5px;
-            box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.1);
-        }
-    
-    
-        p {
+    .new {
+        position: absolute;
+        font-family: $font-text;
+        font-weight: 500;
+        font-size: 15px;
+        color: #008766;
+        text-align: center;
+
+        background-color: $color-tertiary;
+        z-index: 2;
+        width: 100px;
+        height: 25px;
+        right: 50px;
+        top: 25px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.1);
+    }
+
+
+    p {
         margin-left: 15px;
         font-family: $font-text;
+    }
+
+    .container_info {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        .favoris {
+            position: absolute;
+            background-color: #b60d0d;
+            width: 50px;
+            height: 50px;
+            right: 15px;
+            top: 15px;
+            clip-path: path('M 5,15  A 10,10 0,0,1 25,15  A 10,10 0,0,1 45,15  Q 45,30 25,45  Q 5,30 5,15 z');
+            offset-path: solid 2px black;
         }
     }
+}
+
+
+
+/*---------------------------------footer---------------------------------*/
+
+footer {
+    background-color: #353535;
+    margin: 0;
+    padding: 15px;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+.titre-footer {
+    font-family: $font-titre-logo;
+    margin-bottom: 15px;
+}
+
+.list-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.propal a {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-left: 15px;
+
+    }
+
+}
+
+.partenaire a {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-left: 5px;
+
+    }
+}
+
+.contact {
+    padding-top: 15px;
+}
