@@ -20,13 +20,40 @@ a {
     text-decoration: none;
 }
 
+
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.vide {
+    width: 50px;
+    margin-left: 50px;
+}
+
+.logo {
     font-family: $font-titre-logo;
     font-size: 35px;
     display: flex;
     justify-content: center;
     margin: 10px;
 }
+
+
+h2 {
+    font-family: $font-text;
+    font-size: 20px;
+    font-weight: 300;
+    color: #7e7e7e;
+}
+
+p {
+    font-family: $font-text;
+    font-size: 15px;
+}
+
 
 /*---------------------------------Localisation---------------------------------*/
 .localisation {
@@ -96,6 +123,7 @@ header {
     border: none;
     height: 50px;
     font-size: 15px;
+
     &:hover {
         color: #353535;
         background: linear-gradient(to bottom right, #ff79d973, #9256dc94);
@@ -125,11 +153,11 @@ header {
 }
 
 a:hover {
-    .etape-text{
+    .etape-text {
         background-color: #f5edff;
     }
-    
-    #etape-icone{
+
+    #etape-icone {
         color: $color-primary;
     }
 }
@@ -252,17 +280,120 @@ a:hover {
 
         .favoris {
             position: absolute;
-            background-color: #b60d0d;
+            background-color: #b60d0d9a;
             width: 50px;
             height: 50px;
             right: 15px;
             top: 15px;
             clip-path: path('M 5,15  A 10,10 0,0,1 25,15  A 10,10 0,0,1 45,15  Q 45,30 25,45  Q 5,30 5,15 z');
-            offset-path: solid 2px black;
         }
     }
 }
 
+/*---------------------------------Restaurant la palette du gout---------------------------------*/
+.icone-retour {
+    margin-left: 50px;
+}
+
+.container-resto {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(231, 8, 8);
+
+    .container_img-resto img {
+        width: 100%;
+        height: 225px;
+        display: flex;
+        object-fit: cover;
+
+    }
+}
+
+
+.menu {
+    background-color: #f6f6f6;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    top: 200px;
+    justify-content: center;
+    h2 {
+        font-family: $font-text;
+        font-weight: 600;
+        margin-left: 25px;
+    }
+
+}
+
+
+.nom-resto {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .favoris {
+        position: absolute;
+        background-color: #b60d0d;
+        width: 50px;
+        height: 50px;
+        right: 25px;
+        clip-path: path('M 5,15  A 10,10 0,0,1 25,15  A 10,10 0,0,1 45,15  Q 45,30 25,45  Q 5,30 5,15 z');
+    }
+
+    h1 {
+        font-family: $font-titre-logo;
+        font-size: 25px;
+        font-weight: 300;
+        margin-left: 25px;
+    }
+}
+
+.etiquette_plats {
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    h3 {
+        font-family: $font-text;
+        font-weight: 800;
+    }
+    p {
+        font-family: $font-text;
+        font-weight: 400;
+    }
+}
+
+.fond {
+    display: flex;
+    align-items: flex-end;
+}
+
+.tarif {
+    display: flex;
+    margin-right: 25px;
+}
+
+.selection {
+    position: relative;
+    display: flex;
+    background-color: $color-tertiary;
+    width: 90px;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.validation {
+    position: absolute;
+    display: flex;
+    color: white;
+    width: 90px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
 
 
 /*---------------------------------footer---------------------------------*/
@@ -272,6 +403,7 @@ footer {
     margin: 0;
     padding: 15px;
     color: white;
+
 }
 
 footer a {
