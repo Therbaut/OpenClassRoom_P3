@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+body {
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vide {
+  width: 50px;
+  margin-left: 50px;
+}
+
+.logo {
+  font-family: shrikhand;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+h1 {
+  font-family: roboto;
+}
+
+h2 {
+  font-family: roboto;
+  font-size: 20px;
+  font-weight: 300;
+  color: #7e7e7e;
+}
+
+p {
+  font-family: roboto;
+  font-size: 15px;
+}
+
+/*---------------------------------Restaurant ---------------------------------*/
+.icone-retour {
+  margin-left: 50px;
+}
+
+.container-resto {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(231, 8, 8);
+}
+.container-resto .container_img-resto img {
+  width: 100%;
+  height: 225px;
+  display: flex;
+  object-fit: cover;
+  margin-bottom: -25px;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  top: 200px;
+  justify-content: center;
+}
+.menu h2 {
+  font-family: roboto;
+  font-weight: 600;
+  margin-left: 25px;
+}
+
+.nom-resto {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nom-resto .favoris {
+  position: absolute;
+  background-color: #b60d0d;
+  width: 50px;
+  height: 50px;
+  right: 25px;
+  clip-path: path("M 5,15  A 10,10 0,0,1 25,15  A 10,10 0,0,1 45,15  Q 45,30 25,45  Q 5,30 5,15 z");
+}
+.nom-resto h1 {
+  font-family: shrikhand;
+  font-size: 25px;
+  font-weight: 300;
+  margin-left: 25px;
+}
+
+.etiquette_plats {
+  background-color: white;
+  border-radius: 15px;
+  margin: 10px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.etiquette_plats h3 {
+  font-family: roboto;
+  font-weight: 800;
+  font-size: 15px;
+}
+.etiquette_plats p {
+  font-family: roboto;
+  font-weight: 400;
+}
+
+.fond {
+  display: flex;
+  align-items: flex-end;
+}
+.fond :hover {
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.fond .tarif {
+  display: flex;
+  margin-right: 25px;
+}
+.fond .selection {
+  position: relative;
+  display: flex;
+  background-color: #99E2D0;
+  width: 90px;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.fond .selection .validation {
+  position: absolute;
+  display: flex;
+  color: white;
+  width: 90px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/*---------------------------------footer---------------------------------*/
+footer {
+  background-color: #353535;
+  margin: 0;
+  padding: 15px;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+.titre-footer {
+  font-family: shrikhand;
+  margin-bottom: 15px;
+}
+
+.list-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.propal a {
+  display: flex;
+  align-items: center;
+}
+.propal a p {
+  margin-left: 15px;
+}
+
+.partenaire a {
+  display: flex;
+  align-items: center;
+}
+.partenaire a p {
+  margin-left: 5px;
+}
+
+.contact {
+  padding-top: 15px;
+}
+
+/*# sourceMappingURL=style-resto1.css.map */

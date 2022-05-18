@@ -6,6 +6,9 @@
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./css/style.css"
   },
+  "scripts": {
+    "sass": "sass --watch ./sass/main-resto1.scss:./css/style-resto1.css"
+  },
   "author": "",
   "license": "ISC"
 }
