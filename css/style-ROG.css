@@ -27,10 +27,6 @@ header {
   margin: 10px;
 }
 
-h1 {
-  font-family: roboto;
-}
-
 h2 {
   font-family: roboto;
   font-size: 20px;
@@ -104,11 +100,10 @@ p {
   border: none;
   height: 50px;
   font-size: 15px;
-  transition: opacity 500ms;
-  box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.281);
 }
 #explore:hover {
-  opacity: 0.5;
+  color: #353535;
+  background: linear-gradient(to bottom right, rgba(255, 121, 217, 0.4509803922), rgba(146, 86, 220, 0.5803921569));
 }
 
 /*---------------------------------fonctionnement---------------------------------*/
@@ -116,9 +111,7 @@ p {
   display: flex;
   width: 100%;
   flex-direction: column;
-}
-.fonctionnement h1 {
-  padding-left: 25px;
+  margin: 15px;
 }
 
 .etape {
@@ -126,7 +119,6 @@ p {
   position: relative;
   align-items: center;
   margin: 15px;
-  padding-left: 25px;
 }
 .etape a {
   display: flex;
@@ -149,7 +141,6 @@ a:hover #etape-icone {
   height: 75px;
   align-items: center;
   padding-left: 25px;
-  box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.253);
 }
 .etape-text #etape-icone {
   display: flex;
@@ -171,15 +162,14 @@ a:hover #etape-icone {
   justify-content: center;
   align-items: center;
   top: 7.5px;
-  left: 10px;
+  left: -15px;
 }
 
 /*---------------------------------Restaurant---------------------------------*/
 .titre h1 {
   font-family: roboto;
   font-size: 25px;
-  padding-left: 25px;
-  padding-top: 50px;
+  padding: 20px;
 }
 
 .restaurants {
@@ -195,7 +185,7 @@ a:hover #etape-icone {
 
 .container {
   width: 95%;
-  height: 290px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -221,7 +211,6 @@ a:hover #etape-icone {
   font-size: 15px;
   color: #008766;
   text-align: center;
-  padding-top: 5px;
   background-color: #99E2D0;
   z-index: 2;
   width: 100px;
@@ -229,30 +218,25 @@ a:hover #etape-icone {
   right: 50px;
   top: 25px;
   border-radius: 10px;
-  box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.281);
+  box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.1);
+}
+.container p {
+  margin-left: 15px;
+  font-family: roboto;
 }
 .container .container_info {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 7.5px 0px 15px 0;
 }
 .container .container_info .favoris {
   position: absolute;
   background-color: rgba(182, 13, 13, 0.6039215686);
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   right: 15px;
   top: 15px;
-  clip-path: path("M 4.018905,5.1914243 a 8.7328133,8.7328133 0 0 1 12.083124,-0.2315626 8.7328133,8.7328133 0 0 1 0.01769,-0.017687 8.7328133,8.7328133 0 0 1 0.0032,-0.00325 8.7328133,8.7328133 0 0 1 12.35006,0 8.7328133,8.7328133 0 0 1 1e-6,12.3500633 8.7328133,8.7328133 0 0 1 -0.0032,0.0032 L 16.119721,29.642294 4.0189097,17.541485 3.7696574,17.292232 l 0.00487,-0.0049 A 8.7328133,8.7328133 0 0 1 4.0188772,5.1914522 Z");
-}
-.container .container_info p {
-  margin: 5px 0px 5px 15px;
-  font-family: roboto;
-  font-size: 16px;
-}
-.container .container_info strong {
-  font-size: 18px;
+  clip-path: path("M 5,15  A 10,10 0,0,1 25,15  A 10,10 0,0,1 45,15  Q 45,30 25,45  Q 5,30 5,15 z");
 }
 
 /*---------------------------------Restaurant la palette du gout---------------------------------*/
@@ -270,7 +254,6 @@ a:hover #etape-icone {
   height: 225px;
   display: flex;
   object-fit: cover;
-  margin-bottom: -25px;
 }
 
 .menu {

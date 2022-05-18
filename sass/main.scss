@@ -41,6 +41,9 @@ header {
     margin: 10px;
 }
 
+h1 {
+    font-family: $font-text;
+}
 
 h2 {
     font-family: $font-text;
@@ -65,11 +68,13 @@ p {
     background-color: $color-search;
     font-weight: 600;
 
+
     #localisation {
         display: flex;
         width: 50px;
         height: 50px;
         align-items: center;
+
     }
 
     #recherche {
@@ -81,6 +86,7 @@ p {
         background-color: $color-search;
     }
 }
+
 
 /*---------------------------------information---------------------------------*/
 
@@ -123,10 +129,11 @@ p {
     border: none;
     height: 50px;
     font-size: 15px;
+    transition: opacity 500ms;
+    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.281);
 
     &:hover {
-        color: #353535;
-        background: linear-gradient(to bottom right, #ff79d973, #9256dc94);
+        opacity: 0.5;
     }
 }
 
@@ -136,7 +143,10 @@ p {
     display: flex;
     width: 100%;
     flex-direction: column;
-    margin: 15px;
+
+    h1 {
+        padding-left: 25px;
+    }
 }
 
 .etape {
@@ -144,6 +154,8 @@ p {
     position: relative;
     align-items: center;
     margin: 15px;
+    padding-left: 25px;
+
 
 
     a {
@@ -173,6 +185,8 @@ a:hover {
     height: 75px;
     align-items: center;
     padding-left: 25px;
+    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.253);
+
 
 
     #etape-icone {
@@ -200,7 +214,7 @@ a:hover {
         justify-content: center;
         align-items: center;
         top: 7.5px;
-        left: -15px;
+        left: 10px;
     }
 }
 
@@ -213,7 +227,8 @@ a:hover {
 .titre h1 {
     font-family: $font-text;
     font-size: 25px;
-    padding: 20px;
+    padding-left: 25px;
+    padding-top: 50px;
 }
 
 .restaurants {
@@ -229,7 +244,7 @@ a:hover {
 
 .container {
     width: 95%;
-    height: 300px;
+    height: 290px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -256,6 +271,7 @@ a:hover {
         font-size: 15px;
         color: #008766;
         text-align: center;
+        padding-top: 5px;
 
         background-color: $color-tertiary;
         z-index: 2;
@@ -264,31 +280,44 @@ a:hover {
         right: 50px;
         top: 25px;
         border-radius: 10px;
-        box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.1);
+        box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.281);
     }
 
 
-    p {
-        margin-left: 15px;
-        font-family: $font-text;
-    }
+
 
     .container_info {
         display: flex;
         justify-content: space-between;
         position: relative;
+        padding: 7.5px 0px 15px 0;
+
+        
 
         .favoris {
             position: absolute;
             background-color: #b60d0d9a;
-            width: 50px;
-            height: 50px;
+            width: 35px;
+            height: 35px;
             right: 15px;
             top: 15px;
-            clip-path: path('M 5,15  A 10,10 0,0,1 25,15  A 10,10 0,0,1 45,15  Q 45,30 25,45  Q 5,30 5,15 z');
+            clip-path: path('M 4.018905,5.1914243 a 8.7328133,8.7328133 0 0 1 12.083124,-0.2315626 8.7328133,8.7328133 0 0 1 0.01769,-0.017687 8.7328133,8.7328133 0 0 1 0.0032,-0.00325 8.7328133,8.7328133 0 0 1 12.35006,0 8.7328133,8.7328133 0 0 1 1e-6,12.3500633 8.7328133,8.7328133 0 0 1 -0.0032,0.0032 L 16.119721,29.642294 4.0189097,17.541485 3.7696574,17.292232 l 0.00487,-0.0049 A 8.7328133,8.7328133 0 0 1 4.0188772,5.1914522 Z');
+        }
+
+        p {
+            margin: 5px 0px 5px 15px;
+            font-family: $font-text;
+            font-size: 16px;
+        }
+
+        strong {
+            font-size: 18px;
         }
     }
+
 }
+
+
 
 /*---------------------------------Restaurant la palette du gout---------------------------------*/
 .icone-retour {
@@ -305,6 +334,7 @@ a:hover {
         height: 225px;
         display: flex;
         object-fit: cover;
+        margin-bottom: -25px;
 
     }
 }
@@ -317,6 +347,7 @@ a:hover {
     width: 100%;
     top: 200px;
     justify-content: center;
+
     h2 {
         font-family: $font-text;
         font-weight: 600;
@@ -355,10 +386,13 @@ a:hover {
     padding-left: 10px;
     display: flex;
     justify-content: space-between;
+
     h3 {
         font-family: $font-text;
         font-weight: 800;
+        font-size: 15px;
     }
+
     p {
         font-family: $font-text;
         font-weight: 400;
@@ -368,33 +402,43 @@ a:hover {
 .fond {
     display: flex;
     align-items: flex-end;
-}
 
-.tarif {
-    display: flex;
-    margin-right: 25px;
-}
+    :hover {
+        transform-origin: 100% 50%;
+        transform: scaleX(0);
+        transition: transform 1000ms cubic-bezier(.32, 0, .07, 1);
+    }
 
-.selection {
-    position: relative;
-    display: flex;
-    background-color: $color-tertiary;
-    width: 90px;
-    height: 100%;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
 
-.validation {
-    position: absolute;
-    display: flex;
-    color: white;
-    width: 90px;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
 
+    .tarif {
+        display: flex;
+        margin-right: 25px;
+    }
+
+    .selection {
+        position: relative;
+        display: flex;
+        background-color: $color-tertiary;
+        width: 90px;
+        height: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+
+        .validation {
+            position: absolute;
+            display: flex;
+            color: white;
+            width: 90px;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+    }
+}
 
 /*---------------------------------footer---------------------------------*/
 

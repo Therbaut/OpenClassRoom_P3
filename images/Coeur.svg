@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="30.563944"
+   height="28.465115"
+   viewBox="0 0 30.563944 28.465115"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="Coeur.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.96367484,-1.8842878)">
+    <path
+       id="rect276"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.018905,5.1914243 a 8.7328133,8.7328133 0 0 1 12.083124,-0.2315626 8.7328133,8.7328133 0 0 1 0.01769,-0.017687 8.7328133,8.7328133 0 0 1 0.0032,-0.00325 8.7328133,8.7328133 0 0 1 12.35006,0 8.7328133,8.7328133 0 0 1 1e-6,12.3500633 8.7328133,8.7328133 0 0 1 -0.0032,0.0032 L 16.119721,29.642294 4.0189097,17.541485 3.7696574,17.292232 l 0.00487,-0.0049 A 8.7328133,8.7328133 0 0 1 4.0188772,5.1914522 Z" />
+  </g>
+</svg>
