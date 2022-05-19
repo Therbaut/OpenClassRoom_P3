@@ -10,6 +10,18 @@ $color-search: #eaeaea;
 
 
 
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
+
+
 body {
     margin: 0;
 }
@@ -117,6 +129,10 @@ p {
     }
 }
 
+.compo-menu {
+    animation: fadein 2s;
+}
+
 .etiquette_plats {
     background-color: white;
     border-radius: 15px;
@@ -124,6 +140,7 @@ p {
     padding-left: 10px;
     display: flex;
     justify-content: space-between;
+   
 
     h3 {
         font-family: $font-text;
@@ -136,6 +153,7 @@ p {
         font-weight: 400;
     }
 }
+
 
 .fond {
     display: flex;
@@ -177,6 +195,52 @@ p {
 
     }
 }
+.info-fonction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    
+
+    h1 {
+        font-size: 25px;
+        font-family: $font-text;
+
+    }
+
+    p {
+        font-size: 15px;
+        font-family: $font-text;
+    }
+
+    .btn-explore {
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+
+#explore {
+    justify-content: center;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    border: none;
+    height: 50px;
+    width: 200px;
+    font-size: 15px;
+    transition: opacity 500ms;
+    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.281);
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+
 
 /*---------------------------------footer---------------------------------*/
 

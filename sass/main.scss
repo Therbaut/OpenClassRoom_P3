@@ -87,6 +87,10 @@ p {
     }
 }
 
+.search input {
+    color: black;
+}
+
 
 /*---------------------------------information---------------------------------*/
 
@@ -156,8 +160,6 @@ p {
     margin: 15px;
     padding-left: 25px;
 
-
-
     a {
         display: flex;
         width: 98%;
@@ -169,7 +171,7 @@ a:hover {
         background-color: #f5edff;
     }
 
-    #etape-icone {
+    i {
         color: $color-primary;
     }
 }
@@ -184,20 +186,22 @@ a:hover {
     width: 100%;
     height: 75px;
     align-items: center;
-    padding-left: 25px;
+    padding-left: 35px;
     box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.253);
 
 
 
-    #etape-icone {
+    i {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 25px;
-        padding-right: 15px;
         color: #7e7e7e;
+        margin-right: 15px;
     }
 
+    p {
+        padding-left: 15px;
+    }
 }
 
 
@@ -215,6 +219,7 @@ a:hover {
         align-items: center;
         top: 7.5px;
         left: 10px;
+
     }
 }
 
@@ -238,6 +243,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    padding-bottom: 50px;
 }
 
 .container {
@@ -251,6 +257,7 @@ a:hover {
     position: relative;
     justify-content: space-between;
     margin: 15px;
+    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.253);
 
     .container_img img {
         width: 100%;
@@ -290,17 +297,7 @@ a:hover {
         position: relative;
         padding: 7.5px 0px 15px 0;
 
-        
 
-        .favoris {
-            position: absolute;
-            background-color: #b60d0d9a;
-            width: 35px;
-            height: 35px;
-            right: 15px;
-            top: 15px;
-            clip-path: path('M 4.018905,5.1914243 a 8.7328133,8.7328133 0 0 1 12.083124,-0.2315626 8.7328133,8.7328133 0 0 1 0.01769,-0.017687 8.7328133,8.7328133 0 0 1 0.0032,-0.00325 8.7328133,8.7328133 0 0 1 12.35006,0 8.7328133,8.7328133 0 0 1 1e-6,12.3500633 8.7328133,8.7328133 0 0 1 -0.0032,0.0032 L 16.119721,29.642294 4.0189097,17.541485 3.7696574,17.292232 l 0.00487,-0.0049 A 8.7328133,8.7328133 0 0 1 4.0188772,5.1914522 Z');
-        }
 
         p {
             margin: 5px 0px 5px 15px;
@@ -313,6 +310,31 @@ a:hover {
         }
     }
 
+}
+
+.container_heart {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 30px;
+    top: -15px;
+    background: black;
+    clip-path: path('M 4.018905,5.1914243 a 8.7328133,8.7328133 0 0 1 12.083124,-0.2315626 8.7328133,8.7328133 0 0 1 0.01769,-0.017687 8.7328133,8.7328133 0 0 1 0.0032,-0.00325 8.7328133,8.7328133 0 0 1 12.35006,0 8.7328133,8.7328133 0 0 1 1e-6,12.3500633 8.7328133,8.7328133 0 0 1 -0.0032,0.0032 L 16.119721,29.642294 4.0189097,17.541485 3.7696574,17.292232 l 0.00487,-0.0049 A 8.7328133,8.7328133 0 0 1 4.0188772,5.1914522 Z');
+    transform: translate(0, 35px);
+
+    .btn_heart {
+        width: 35px;
+        height: 35px;
+        top: -15px;
+        background: white;
+        clip-path: path('M 4.9659367,6.4198605 a 8.0564026,7.7507194 0 0 1 11.1472103,-0.2055211 8.0564026,7.7507194 0 0 1 0.01632,-0.015698 8.0564026,7.7507194 0 0 1 0.003,-0.00289 8.0564026,7.7507194 0 0 1 11.393471,0 8.0564026,7.7507194 0 0 1 1e-6,10.9611726 8.0564026,7.7507194 0 0 1 -0.003,0.0029 L 16.129469,28.120981 4.965941,17.381031 4.7359948,17.159809 l 0.0045,-0.0043 A 8.0564026,7.7507194 0 0 1 4.965911,6.4198853 Z');
+
+        &:hover {
+            transition: 1500ms;
+            background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        }
+
+    }
 }
 
 /*---------------------------------footer---------------------------------*/
@@ -362,4 +384,96 @@ footer a {
 
 .contact {
     padding-top: 15px;
+}
+
+
+/*---------------------------------------------Media Queries desktop -------------------------------------------------------*/
+@media screen and (min-width:992px) {
+
+    .full-etape {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .etape {
+        flex-direction: column;
+        position: relative;
+        width: 25%;
+        align-items: center;
+
+        .etape-text {
+            flex-direction: column;
+            text-align: center;
+            margin: 0;
+            padding: 15px 0 0 20px;
+            height: 100px;
+
+            p {
+                margin: 0;
+                padding: 15px 0 0 0;
+            }
+        }
+    }
+
+    .etape-number {
+        p {
+            top: 22px;   
+        }
+    }
+
+    .card-container {
+        justify-content: space-around;
+    }
+
+    .container {
+        width: 25%;
+
+    }
+}
+
+/*---------------------------------------------Media Queries tablette -------------------------------------------------------*/
+
+
+
+@media screen and (min-width:768px) and (max-width:992px) {
+
+   .full-etape {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+   }
+
+    .etape {
+        flex-direction: column;
+        position: relative;
+        width: 30%;
+        align-items: center;
+
+        .etape-text {
+            flex-direction: column;
+            text-align: center;
+            margin: 0;
+            padding: 15px 0 0 20px;
+            height: 100px;
+
+            p {
+                margin: 0;
+                padding: 15px 0 0 0;
+            }
+        }
+    }
+    .etape-number {
+        p {
+            top: 22px;   
+        }
+    }
+
+    .card-container {
+        justify-content: space-around;
+    }
+
+    .container {
+        width: 30%;
+    }
 }
