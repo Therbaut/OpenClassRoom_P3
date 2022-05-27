@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-@keyframes fadein {
-  from {
+@keyframes anim-div {
+  0% {
+    margin-top: -70px;
     opacity: 0;
   }
-  to {
+  100% {
+    margin-top: 0;
     opacity: 1;
   }
 }
@@ -104,7 +106,13 @@ p {
 }
 
 .compo-menu {
-  animation: fadein 2s;
+  animation: anim-div 5s;
+}
+
+h2 {
+  border-bottom: solid 4px #99E2D0;
+  padding-bottom: 10px;
+  width: 50px;
 }
 
 .etiquette_plats {
@@ -125,20 +133,20 @@ p {
   font-weight: 400;
 }
 
-.fond {
+.anim {
   display: flex;
   align-items: flex-end;
+  width: 40px;
+  height: 100%;
 }
-.fond :hover {
-  transform-origin: 100% 50%;
-  transform: scaleX(0);
-  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+.anim p {
+  padding-right: 15px;
 }
-.fond .tarif {
-  display: flex;
-  margin-right: 25px;
+.anim p :active {
+  transform: translateX(-90px);
+  transition: transform 300ms ease-out;
 }
-.fond .selection {
+.anim .selection {
   position: relative;
   display: flex;
   background-color: #99E2D0;
@@ -147,7 +155,7 @@ p {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-.fond .selection .validation {
+.anim .selection .validation {
   position: absolute;
   display: flex;
   color: white;
@@ -155,6 +163,11 @@ p {
   height: 100%;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+}
+.anim .selection :active {
+  transform: translateX(-90px);
+  transition: transform 300ms ease-out;
 }
 
 .info-fonction {
@@ -236,5 +249,24 @@ footer a {
 .contact {
   padding-top: 15px;
 }
+
+/*---------------------------------------------Media Queries desktop -------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+  .compo-menu {
+    display: flex;
+    width: 90%;
+  }
+
+  .type_plats {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .etiquette_plats {
+    display: flex;
+  }
+}
+/*---------------------------------------------Media Queries tablette -------------------------------------------------------*/
 
 /*# sourceMappingURL=main-resto1.css.map */

@@ -10,16 +10,20 @@ $color-search: #eaeaea;
 
 
 
-@keyframes fadein {
-    from {
-        opacity:0;
+
+
+@keyframes anim-div {
+    0% {
+        margin-top: -70px;
+        opacity: 0;
     }
-    to {
-        opacity:1;
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
     }
+
 }
-
-
 
 
 body {
@@ -130,7 +134,16 @@ p {
 }
 
 .compo-menu {
-    animation: fadein 2s;
+    animation: anim-div 5s;
+
+}
+
+h2 {
+
+    border-bottom: solid 4px $color-tertiary;
+    padding-bottom: 10px;
+    width: 50px;
+
 }
 
 .etiquette_plats {
@@ -140,7 +153,8 @@ p {
     padding-left: 10px;
     display: flex;
     justify-content: space-between;
-   
+
+
 
     h3 {
         font-family: $font-text;
@@ -155,21 +169,19 @@ p {
 }
 
 
-.fond {
+.anim {
     display: flex;
     align-items: flex-end;
+    width: 40px;
+    height: 100%;
 
-    :hover {
-        transform-origin: 100% 50%;
-        transform: scaleX(0);
-        transition: transform 1000ms cubic-bezier(.32, 0, .07, 1);
-    }
+    p {
+        padding-right: 15px;
 
-
-
-    .tarif {
-        display: flex;
-        margin-right: 25px;
+        :active {
+            transform: translateX(-90px);
+            transition: transform 300ms ease-out;
+        }
     }
 
     .selection {
@@ -182,6 +194,7 @@ p {
         border-bottom-right-radius: 15px;
 
 
+
         .validation {
             position: absolute;
             display: flex;
@@ -190,18 +203,28 @@ p {
             height: 100%;
             align-items: center;
             justify-content: center;
+            opacity: 0;
 
         }
 
+        :active {
+            transform: translateX(-90px);
+            transition: transform 300ms ease-out;
+        }
+
+
     }
 }
+
+
+
 .info-fonction {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 30px;
-    
+
 
     h1 {
         font-size: 25px;
@@ -217,7 +240,7 @@ p {
     .btn-explore {
         display: flex;
         justify-content: center;
-        
+
     }
 }
 
@@ -289,4 +312,36 @@ footer a {
 
 .contact {
     padding-top: 15px;
+}
+
+
+/*---------------------------------------------Media Queries desktop -------------------------------------------------------*/
+@media screen and (min-width:992px) {
+    .compo-menu{ 
+        display: flex;
+        width: 90%;
+        
+    }
+
+    .type_plats {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .etiquette_plats {
+        display: flex;
+        
+    }
+    
+    
+}
+
+/*---------------------------------------------Media Queries tablette -------------------------------------------------------*/
+
+
+
+@media screen and (min-width:768px) and (max-width:992px) {
+
+   
 }

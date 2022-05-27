@@ -7,6 +7,11 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-search: #eaeaea;
 
+@keyframes heart {
+    to { transform: scale(1)}
+    from { transform: scale(0);}
+}
+
 
 
 
@@ -329,11 +334,11 @@ a:hover {
         background: white;
         clip-path: path('M 4.9659367,6.4198605 a 8.0564026,7.7507194 0 0 1 11.1472103,-0.2055211 8.0564026,7.7507194 0 0 1 0.01632,-0.015698 8.0564026,7.7507194 0 0 1 0.003,-0.00289 8.0564026,7.7507194 0 0 1 11.393471,0 8.0564026,7.7507194 0 0 1 1e-6,10.9611726 8.0564026,7.7507194 0 0 1 -0.003,0.0029 L 16.129469,28.120981 4.965941,17.381031 4.7359948,17.159809 l 0.0045,-0.0043 A 8.0564026,7.7507194 0 0 1 4.965911,6.4198853 Z');
 
-        &:hover {
-            transition: 1500ms;
+        &:active {
+            animation: heart;
+            animation-duration: 2s;
             background: linear-gradient(to bottom right, $color-secondary, $color-primary);
         }
-
     }
 }
 
