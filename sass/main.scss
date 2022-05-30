@@ -7,16 +7,79 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-search: #eaeaea;
 
-@keyframes heart {
-    to { transform: scale(1)}
-    from { transform: scale(0);}
+
+@keyframes spiner {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
 }
 
+@keyframes divspiner {
+    to {
+        opacity: 0;
+
+    }
+
+    from {
+        opacity: 1;
+        display: none;
+    }
+}
+
+@keyframes heart {
+    to {
+        transform: scale(1)
+    }
+
+    from {
+        transform: scale(0);
+    }
+}
+
+/*
+.spiner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: $color-tertiary;
+    z-index: 5;
+    animation: divspiner 5s;
+    animation-fill-mode: forwards;
+
+}
+
+.loading_spiner {
+    border: 20px solid $color-tertiary;
+    border-top: 20px solid $color-primary;
+    border-bottom: 20px solid $color-secondary;
+
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    animation: spiner infinite 1s;
+    animation-duration: 5s;
+}*/
 
 
 
 body {
     margin: 0;
+    z-index: 0;
 }
 
 
@@ -423,7 +486,7 @@ footer a {
 
     .etape-number {
         p {
-            top: 22px;   
+            top: 22px;
         }
     }
 
@@ -443,11 +506,11 @@ footer a {
 
 @media screen and (min-width:768px) and (max-width:992px) {
 
-   .full-etape {
-       display: flex;
-       flex-direction: row;
-       justify-content: space-around;
-   }
+    .full-etape {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
     .etape {
         flex-direction: column;
@@ -468,9 +531,10 @@ footer a {
             }
         }
     }
+
     .etape-number {
         p {
-            top: 22px;   
+            top: 22px;
         }
     }
 
