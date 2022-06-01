@@ -16,8 +16,10 @@ $color-search: #eaeaea;
 
 
 @keyframes anim-plats {
-    to {opacity: 1;}
-    from {opacity: 0;}
+    to {opacity: 1;
+        transform: translateY(0px);}
+    from {opacity: 0;
+    transform: translateY(10px);}
 }
 
 /*@keyframes anim-div {
@@ -119,7 +121,8 @@ h2 {
 
 p {
     font-family: $font-text;
-    font-size: 15px;
+    font-size: 14px;
+    
 }
 
 /*---------------------------------Restaurant ---------------------------------*/
@@ -130,7 +133,6 @@ p {
 .container-resto {
     display: flex;
     flex-direction: column;
-    background-color: rgb(231, 8, 8);
 
     .container_img-resto img {
         width: 100%;
@@ -224,6 +226,9 @@ h2 {
     width: 50px;
 
 }
+.nom_plat {
+    width: 70%;
+}
 
 .etiquette_plats {
     background-color: white;
@@ -232,6 +237,7 @@ h2 {
     padding-left: 10px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.281);
 
 
 
@@ -244,6 +250,8 @@ h2 {
     p {
         font-family: $font-text;
         font-weight: 400;
+        text-overflow: ellipsis;
+       
     }
 }
 
@@ -282,15 +290,17 @@ h2 {
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         color: white;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
         
     }
     
     
 
     
-    p {
-        padding-right: 15px;
-    }
+    
     
     
 }
@@ -420,5 +430,7 @@ footer a {
 
 @media screen and (min-width:768px) and (max-width:992px) {
 
+  
    
+    
 }

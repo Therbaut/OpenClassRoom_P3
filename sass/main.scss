@@ -8,29 +8,7 @@ $color-tertiary: #99E2D0;
 $color-search: #eaeaea;
 
 
-@keyframes spiner {
-    0% {
-        transform: rotate(0deg);
-        opacity: 0.5;
-    }
 
-    100% {
-        transform: rotate(360deg);
-        opacity: 0;
-    }
-}
-
-@keyframes divspiner {
-    to {
-        opacity: 0;
-
-    }
-
-    from {
-        opacity: 1;
-        display: none;
-    }
-}
 
 @keyframes heart {
     to {
@@ -43,39 +21,85 @@ $color-search: #eaeaea;
 }
 
 /*
-.spiner {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background-color: $color-tertiary;
-    z-index: 5;
-    animation: divspiner 5s;
-    animation-fill-mode: forwards;
+@keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -35px;
+    }
+    100% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -124px;
+    }
+  }
+  
+  @keyframes color {
+  
+    0% {
+      stroke: $color-primary;
+    }
+    33% {
+      stroke: $color-secondary;
+    }
+    66% {
+      stroke: $color-tertiary;
+    }
+    
+  }
 
+
+
+.loader {
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
 }
 
-.loading_spiner {
-    border: 20px solid $color-tertiary;
-    border-top: 20px solid $color-primary;
-    border-bottom: 20px solid $color-secondary;
+.circular {
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: auto;
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out ;
+  stroke-linecap: round;
+}
+
+
+.showbox {
     position: absolute;
-    right: 0;
     top: 0;
     bottom: 0;
     left: 0;
-    animation: spiner infinite 1s;
-    animation-duration: 5s;
-}*/
-
-
+    right: 0;
+    padding: 5%;
+    z-index: 10;
+  }
+*/
 
 body {
     margin: 0;
@@ -540,9 +564,10 @@ footer a {
 
     .card-container {
         justify-content: space-around;
+        
     }
 
     .container {
-        width: 30%;
+        width: 40%;
     }
 }
