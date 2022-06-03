@@ -9,72 +9,34 @@ $color-search: #eaeaea;
 
 
 
-@keyframes heart {
-    to { transform: scale(1)}
-    from { transform: scale(0);}
-}
+
 
 
 @keyframes anim-plats {
-    to {opacity: 1;
-        transform: translateY(0px);}
-    from {opacity: 0;
-    transform: translateY(10px);}
-}
-
-/*@keyframes anim-div {
-    0% {
-        margin-top: -70px;
-        opacity: 0;
-    }
-
-    100% {
-        margin-top: 0;
-        opacity: 1;
-    }
-}*/
-
-@keyframes validation {
     to {
-        transform: translateX(-90px);
         opacity: 1;
+        transform: translateY(0px);
     }
+
     from {
-        transform: translateX(0);
         opacity: 0;
+        transform: translateY(10px);
     }
 }
 
-@keyframes validation_rotation {
+@keyframes rotation_check {
     to {
         transform: rotate(360deg);
         opacity: 1;
     }
+
     from {
         transform: rotate(0deg);
         opacity: 0;
     }
 }
 
-@keyframes prix {
-    to {
-        transform: translateX(-90px);
-        
-    }
-    from {
-        transform: translateX(0);
-        
-    }
-}
 
-@keyframes rotation_validation {
-    to {
-        transform: rotate(180);
-    }
-    from {
-        transform: rotate(0);
-    }
-}
 
 
 body {
@@ -122,12 +84,12 @@ h2 {
 p {
     font-family: $font-text;
     font-size: 14px;
-    
+
 }
 
 /*---------------------------------Restaurant ---------------------------------*/
 .icone-retour {
-    margin-left: 50px;
+    margin-left: 25px;
 }
 
 .container-resto {
@@ -167,28 +129,7 @@ p {
     align-items: center;
     position: relative;
 
-    .container_heart {
-        position: absolute;
-        background: black;
-        width: 50px;
-        height: 50px;
-        right: 25px;
-        clip-path: path('M 4.018905,5.1914243 a 8.7328133,8.7328133 0 0 1 12.083124,-0.2315626 8.7328133,8.7328133 0 0 1 0.01769,-0.017687 8.7328133,8.7328133 0 0 1 0.0032,-0.00325 8.7328133,8.7328133 0 0 1 12.35006,0 8.7328133,8.7328133 0 0 1 1e-6,12.3500633 8.7328133,8.7328133 0 0 1 -0.0032,0.0032 L 16.119721,29.642294 4.0189097,17.541485 3.7696574,17.292232 l 0.00487,-0.0049 A 8.7328133,8.7328133 0 0 1 4.0188772,5.1914522 Z');
-        transform: translate(0px, 25px);
-    }
-    .btn_heart {
-        width: 50px;
-        height: 50px;
-        right: 25px;
-        background: white;
-        clip-path: path('M 4.9659367,6.4198605 a 8.0564026,7.7507194 0 0 1 11.1472103,-0.2055211 8.0564026,7.7507194 0 0 1 0.01632,-0.015698 8.0564026,7.7507194 0 0 1 0.003,-0.00289 8.0564026,7.7507194 0 0 1 11.393471,0 8.0564026,7.7507194 0 0 1 1e-6,10.9611726 8.0564026,7.7507194 0 0 1 -0.003,0.0029 L 16.129469,28.120981 4.965941,17.381031 4.7359948,17.159809 l 0.0045,-0.0043 A 8.0564026,7.7507194 0 0 1 4.965911,6.4198853 Z');
 
-        &:active {
-            animation: heart;
-            animation-duration: 2s;
-            background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-        }
-    }
 
     h1 {
         font-family: $font-titre-logo;
@@ -198,10 +139,56 @@ p {
     }
 }
 
+.background_heart {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 30px;
+    top: 15px;
+    background: black;
+    clip-path: path('M 4.018905,5.1914243 a 8.7328133,8.7328133 0 0 1 12.083124,-0.2315626 8.7328133,8.7328133 0 0 1 0.01769,-0.017687 8.7328133,8.7328133 0 0 1 0.0032,-0.00325 8.7328133,8.7328133 0 0 1 12.35006,0 8.7328133,8.7328133 0 0 1 1e-6,12.3500633 8.7328133,8.7328133 0 0 1 -0.0032,0.0032 L 16.119721,29.642294 4.0189097,17.541485 3.7696574,17.292232 l 0.00487,-0.0049 A 8.7328133,8.7328133 0 0 1 4.0188772,5.1914522 Z');
+
+    .background_heart_white {
+        background: #f6f6f6;
+        top: 0;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        clip-path: path('M 4.9659367,6.4198605 a 8.0564026,7.7507194 0 0 1 11.1472103,-0.2055211 8.0564026,7.7507194 0 0 1 0.01632,-0.015698 8.0564026,7.7507194 0 0 1 0.003,-0.00289 8.0564026,7.7507194 0 0 1 11.393471,0 8.0564026,7.7507194 0 0 1 1e-6,10.9611726 8.0564026,7.7507194 0 0 1 -0.003,0.0029 L 16.129469,28.120981 4.965941,17.381031 4.7359948,17.159809 l 0.0045,-0.0043 A 8.0564026,7.7507194 0 0 1 4.965911,6.4198853 Z');
+
+    }
+
+    .container_heart {
+        position: absolute;
+        top: 0;
+        width: 35px;
+        height: 35px;
+        clip-path: path('M 4.9659367,6.4198605 a 8.0564026,7.7507194 0 0 1 11.1472103,-0.2055211 8.0564026,7.7507194 0 0 1 0.01632,-0.015698 8.0564026,7.7507194 0 0 1 0.003,-0.00289 8.0564026,7.7507194 0 0 1 11.393471,0 8.0564026,7.7507194 0 0 1 1e-6,10.9611726 8.0564026,7.7507194 0 0 1 -0.003,0.0029 L 16.129469,28.120981 4.965941,17.381031 4.7359948,17.159809 l 0.0045,-0.0043 A 8.0564026,7.7507194 0 0 1 4.965911,6.4198853 Z');
+
+        &:hover {
+
+            .btn_heart {
+                height: 35px;
+                transition: height 2s ease-in;
+            }
+        }
+
+        .btn_heart {
+            position: absolute;
+            bottom: 0;
+            width: 35px;
+            height: 0px;
+
+            background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+
+        }
+    }
+}
+
 .nom_plat1 {
-     animation: anim-plats;
-     animation-duration: 2s;
-    
+    animation: anim-plats;
+    animation-duration: 2s;
+
 }
 
 .nom_plat2 {
@@ -219,15 +206,14 @@ p {
     animation-duration: 8s;
 }
 
+
+
 h2 {
 
     border-bottom: solid 4px $color-tertiary;
     padding-bottom: 10px;
     width: 50px;
 
-}
-.nom_plat {
-    width: 70%;
 }
 
 .etiquette_plats {
@@ -239,71 +225,74 @@ h2 {
     justify-content: space-between;
     box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.281);
 
+    .etiquette {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
 
-
-    h3 {
-        font-family: $font-text;
-        font-weight: 800;
-        font-size: 15px;
-    }
-
-    p {
-        font-family: $font-text;
-        font-weight: 400;
-        text-overflow: ellipsis;
-       
-    }
-}
-
-
-.fond {
-    display: flex;
-    width: 130px;
-    align-items: flex-end;
-    position: relative;
-    right: -90px;
-    &:hover {
-        animation: validation;
-        animation-duration: 5s;
-        animation-fill-mode: forwards;
-    }
-    .fa-circle-check {
-        transition: all(180deg) 5s;
-        &:hover {
-            transform: rotate(360deg);
+        .info_plat {
+            display: flex;
+            justify-content: space-between;
+        }
+        p {
+            text-overflow: ellipsis;
         }
     }
-
-   .prix {
-       display: flex;
-       
-   }
     .validation {
-        position: absolute;
         display: flex;
-        width: 90px;
-        right: 0;
-        height: 100%;
+        width: 0px;
         align-items: center;
         justify-content: center;
         background-color: $color-tertiary;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        color: white;
-        opacity: 0;
-        &:hover {
+        border-radius: 0 15px 15px 0;
+    }
+
+    p {
+        font-size: 15px;
+        font-family: $font-text;
+        margin: 0 10px 10px 0 ;
+    }
+
+    h3 {
+        font-size: 15px;
+        font-family: $font-text;
+        margin: 10px 10px 5px 0;
+    }
+
+    &:hover {
+        .validation {
+            transition: width 2s ease-in;
+            width: 100px;
+            
+        }
+
+        .fa-circle-check {
+            animation: rotation_check 2s ease-in;
             opacity: 1;
         }
-        
-    }
-    
-    
 
-    
-    
-    
-    
+
+    }
+
+    .validation {
+        display: flex;
+        width: 0px;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-tertiary;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .fa-circle-check {
+        color: white;
+        opacity: 0;
+    }
 }
+
+
+
+
 
 .info-fonction {
     display: flex;
@@ -404,33 +393,25 @@ footer a {
 
 /*---------------------------------------------Media Queries desktop -------------------------------------------------------*/
 @media screen and (min-width:992px) {
-    .compo-menu{ 
+    
+    .compo-menu {
         display: flex;
-        width: 90%;
-        
-    }
-
-    .type_plats {
+        width: 100%;
+        justify-content: space-around;
+      }
+      .type_plats {
         display: flex;
         flex-direction: column;
-        width: 100%;
-    }
-    
-    .etiquette_plats {
+        width: 30%;
+      }
+      .etiquette_plats {
         display: flex;
-        
-    }
-    
-    
+      }
+
 }
 
 /*---------------------------------------------Media Queries tablette -------------------------------------------------------*/
 
 
 
-@media screen and (min-width:768px) and (max-width:992px) {
-
-  
-   
-    
-}
+@media screen and (min-width:768px) and (max-width:992px) {}
