@@ -89,7 +89,7 @@ p {
 
 /*---------------------------------Restaurant ---------------------------------*/
 .icone-retour {
-    margin-left: 25px;
+    margin-left: 50px;
 }
 
 .container-resto {
@@ -224,8 +224,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.281);
-    
-
 
     .etiquette {
         display: flex;
@@ -236,17 +234,11 @@ h2 {
         .info_plat {
             display: flex;
             justify-content: space-between;
-            
-            .accompagnements {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            
         }
-
+        p {
+            text-overflow: ellipsis;
+        }
     }
-
     .validation {
         display: flex;
         width: 0px;
@@ -259,9 +251,8 @@ h2 {
     p {
         font-size: 15px;
         font-family: $font-text;
-        margin: 0 10px 10px 0;
-
-
+        margin: 0 10px 10px 0 ;
+        text-overflow: ellipsis;
     }
 
     h3 {
@@ -274,13 +265,14 @@ h2 {
         .validation {
             transition: width 2s ease-in;
             width: 100px;
-
+            
         }
 
         .fa-circle-check {
             animation: rotation_check 2s ease-in;
             opacity: 1;
         }
+
 
     }
 
@@ -340,13 +332,11 @@ h2 {
     height: 50px;
     width: 200px;
     font-size: 15px;
-    font-weight: 600;
     transition: opacity 500ms;
     box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.281);
 
     &:hover {
         opacity: 0.5;
-        box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -404,22 +394,20 @@ footer a {
 
 /*---------------------------------------------Media Queries desktop -------------------------------------------------------*/
 @media screen and (min-width:992px) {
-
+    
     .compo-menu {
         display: flex;
         width: 100%;
         justify-content: space-around;
-    }
-
-    .type_plats {
+      }
+      .type_plats {
         display: flex;
         flex-direction: column;
         width: 30%;
-    }
-
-    .etiquette_plats {
+      }
+      .etiquette_plats {
         display: flex;
-    }
+      }
 
 }
 

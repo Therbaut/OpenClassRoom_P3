@@ -65,7 +65,7 @@ p {
 
 /*---------------------------------Restaurant ---------------------------------*/
 .icone-retour {
-  margin-left: 25px;
+  margin-left: 50px;
 }
 
 .container-resto {
@@ -186,9 +186,7 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
-.etiquette_plats .etiquette .info_plat .accompagnements {
-  white-space: nowrap;
-  overflow: hidden;
+.etiquette_plats .etiquette p {
   text-overflow: ellipsis;
 }
 .etiquette_plats .validation {
@@ -203,6 +201,7 @@ h2 {
   font-size: 15px;
   font-family: roboto;
   margin: 0 10px 10px 0;
+  text-overflow: ellipsis;
 }
 .etiquette_plats h3 {
   font-size: 15px;
@@ -261,13 +260,11 @@ h2 {
   height: 50px;
   width: 200px;
   font-size: 15px;
-  font-weight: 600;
   transition: opacity 500ms;
   box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.281);
 }
 #explore:hover {
   opacity: 0.5;
-  box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.5);
 }
 
 /*---------------------------------footer---------------------------------*/
@@ -332,4 +329,4 @@ footer a {
 }
 /*---------------------------------------------Media Queries tablette -------------------------------------------------------*/
 
-/*# sourceMappingURL=main-resto1.css.map */
+/*# sourceMappingURL=main-resto1-MacBook%20Pro%20de%20Thomas.css.map */
