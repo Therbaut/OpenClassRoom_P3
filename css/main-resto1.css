@@ -20,7 +20,8 @@
   }
 }
 body {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 a {
@@ -132,7 +133,7 @@ p {
 }
 .background_heart .container_heart:hover .btn_heart {
   height: 35px;
-  transition: height 2s ease-in;
+  transition: height 1s ease-in;
 }
 .background_heart .container_heart .btn_heart {
   position: absolute;
@@ -187,6 +188,9 @@ h2 {
   justify-content: space-between;
 }
 .etiquette_plats .etiquette .info_plat .accompagnements {
+  overflow: hidden;
+}
+.etiquette_plats .etiquette .info_plat .accompagnements p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -210,12 +214,17 @@ h2 {
   margin: 10px 10px 5px 0;
 }
 .etiquette_plats:hover .validation {
-  transition: width 2s ease-in;
+  transition: width 1.5s ease-in;
   width: 100px;
 }
 .etiquette_plats:hover .fa-circle-check {
-  animation: rotation_check 2s ease-in;
+  animation: rotation_check 1.5s ease-in;
   opacity: 1;
+  display: block;
+}
+.etiquette_plats:hover .etiquette {
+  width: calc(100% - 100px);
+  transition: width 1.5s ease-in;
 }
 .etiquette_plats .validation {
   display: flex;
@@ -228,6 +237,7 @@ h2 {
 .etiquette_plats .fa-circle-check {
   color: white;
   opacity: 0;
+  display: none;
 }
 
 .info-fonction {

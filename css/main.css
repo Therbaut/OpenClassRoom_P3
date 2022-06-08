@@ -52,8 +52,6 @@
   text-transform: uppercase;
   text-shadow: 0 0 10px #99E2D0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  animation: affichage 3s;
-  animation-fill-mode: forwards;
 }
 .ring:before {
   content: "";
@@ -90,6 +88,15 @@ span:before {
   top: -6px;
   right: -8px;
   box-shadow: 0 0 20px #FF79DA;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  animation: affichage 3s;
+  animation-fill-mode: forwards;
 }
 
 body {
@@ -379,7 +386,7 @@ a:hover i {
 }
 .background_heart .container_heart:hover .btn_heart {
   height: 35px;
-  transition: height 2s ease-in;
+  transition: height 1s ease-in;
 }
 .background_heart .container_heart .btn_heart {
   position: absolute;

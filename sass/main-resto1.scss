@@ -40,7 +40,8 @@ $color-search: #eaeaea;
 
 
 body {
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 
@@ -169,7 +170,7 @@ p {
 
             .btn_heart {
                 height: 35px;
-                transition: height 2s ease-in;
+                transition: height 1s ease-in;
             }
         }
 
@@ -238,9 +239,13 @@ h2 {
             justify-content: space-between;
             
             .accompagnements {
+                overflow: hidden;
+
+                p {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                }
             }
             
         }
@@ -272,16 +277,22 @@ h2 {
 
     &:hover {
         .validation {
-            transition: width 2s ease-in;
+            transition: width 1.5s ease-in;
             width: 100px;
 
         }
 
         .fa-circle-check {
-            animation: rotation_check 2s ease-in;
+            animation: rotation_check 1.5s ease-in;
             opacity: 1;
+            display:block;
+                        
         }
 
+        .etiquette {
+            width: calc(100% - 100px);
+            transition: width 1.5s ease-in;
+        }
     }
 
     .validation {
@@ -296,7 +307,10 @@ h2 {
     .fa-circle-check {
         color: white;
         opacity: 0;
+        display: none;
     }
+
+    
 }
 
 
