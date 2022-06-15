@@ -94,14 +94,12 @@ span:before {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 10;
   animation: affichage 3s;
   animation-fill-mode: forwards;
 }
 
 body {
   margin: 0;
-  z-index: 0;
 }
 
 a {
@@ -188,6 +186,7 @@ p {
   justify-content: center;
   text-align: center;
   padding: 30px;
+  z-index: 1;
 }
 .info-fonction h1 {
   font-size: 25px;
