@@ -416,7 +416,7 @@ footer a {
   align-items: center;
 }
 .propal a p {
-  margin-left: 15px;
+  margin: 10px 0 5px 15px;
 }
 
 .partenaire a {
@@ -424,12 +424,11 @@ footer a {
   align-items: center;
 }
 .partenaire a p {
-  margin-left: 5px;
+  margin: 10px 0 10px 10px;
 }
 
 .contact {
-  padding-top: 15px;
-  z-index: 10;
+  padding-top: 10px;
 }
 
 /*---------------------------------------------Media Queries desktop -------------------------------------------------------*/
